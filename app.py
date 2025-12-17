@@ -41,4 +41,13 @@ demo= gr.Interface(
     description="Upload an MRI Image to Classify as : pituitary, notumor, meningioma, or glioma."
 )
 
-demo.launch(share=True)
+import os
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", "7860"))
+    demo.launch(
+        server_name="0.0.0.0",
+        server_port=port,
+        share=False
+    )
+
