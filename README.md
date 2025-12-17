@@ -15,7 +15,7 @@ This is a deep learning project I built to classify brain MRI images into four c
 
 This project uses **transfer learning** with **VGG16** pretrained on ImageNet:
 
-- Base model: `VGG16(include_top=False, weights="imagenet", input_shape=(224, 224, 3))`
+- Base model: `VGG16(include_top=False, weights="imagenet", input_shape=(128, 128, 3))`
 - Trainable layers: last convolutional block fine-tuned
 - Custom classification head: GlobalAveragePooling2D + Dense layers + softmax
 - Framework: **TensorFlow / Keras**
